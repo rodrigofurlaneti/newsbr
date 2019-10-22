@@ -1,0 +1,39 @@
+﻿@model newsbr.Models.News
+@{
+    ViewData["Title"] = "Noticias";
+}
+
+    <div class="text-center">
+        <h1 class="display-3">Noticias</h1>
+</div>
+
+                       
+        @foreach (var c in Model.Articles)
+        {
+            <table class="table table-borderless">
+                <tbody>
+                    <tr>
+                        <td align="center">
+                            <a href="@c.Url">
+                                <img src="@c.UrlToImage" alt="..." width="500" height="250">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="@c.Url">
+                                <blockquote class="blockquote text-center">
+                                    <p class="mb-0">@c.Title</p>
+                                    <footer class="blockquote-footer">@c.Description <cite title="@c.Description">@c.Description</cite></footer>
+                                </blockquote>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center"><a href="@c.Url" class="btn btn-primary btn-sm">Ver</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        }
+        <h10>Total de noticias : @Html.Raw(Model.totalresults)</h10>
+
