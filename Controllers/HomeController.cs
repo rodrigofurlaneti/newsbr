@@ -8,7 +8,6 @@ using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using newsbr.Models;
-using newsbr.ViewModels;
 using Newtonsoft.Json;
 
 namespace newsbr.Controllers

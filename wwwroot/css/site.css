@@ -96,25 +96,20 @@ body {
     -o-animation: fadeIn 3s ease-in-out;
     animation: fadeIn 3s ease-in-out;
 }
-
-p {
-    font-family: sans-serif,arial,helvetica;
-    font-size: 20px;
-    letter-spacing: -1px;
-    line-height: 2;
-    margin: 0 0 10px;
-    font-weight: 100;
+body {
+    background: #ffffff none repeat scroll 0 0;
+    color: #000000;
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 400;
+    line-height: 1.4;
 }
 
-.title {
-    font-family: sans-serif,arial,helvetica;
-    font-size: 40px;
-    letter-spacing: -2px;
-    line-height: 1;
-    margin: 0 0 10px;
-    font-weight: 100;
+a {
+    color: #000000;
+    text-decoration: none;
 }
 
-img {
-    border: 2px solid #fff;
+strong {
+    font-weight: 500;
 }
+

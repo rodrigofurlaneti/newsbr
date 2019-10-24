@@ -1,12 +1,17 @@
 ﻿@model newsbr.Models.News
 @{
     ViewData["Title"] = "Noticias";
-}
-    <font face="Calibri" color="Black" size="5">
-        <div class="text-center">
-            <h1 class="display-3">Noticias</h1>
+}<div class="text-center">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-12 header">
+                    <h1 class="logo">Noticias</h1>
+                </div>
+            </div>
         </div>
-
+    </div>
+</div>
 
         @foreach (var c in Model.Articles)
         {
@@ -22,10 +27,12 @@
                     <tr class="table-dark">
                         <td>
                             <a href="@c.Url">
-                                    <strong>
-                                        <p class="text-body title">@c.Title</p>
-                                    </strong>
-                                    <p class="text-body">@c.Description</p>
+                                <strong>
+                                    <p class="text-body title">@c.Title</p>
+                                </strong>
+                                <p class="text-body">@c.Description</p>
+                                <p class="text-right">Publicado em @c.PublishedAt</p>
+                                
                             </a>
                         </td>
                     </tr>
@@ -36,4 +43,4 @@
             </table>
         }
         <h10>Total de noticias : @Html.Raw(Model.totalresults)</h10>
-        </font>
+    

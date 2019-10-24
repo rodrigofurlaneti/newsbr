@@ -2,10 +2,33 @@
 <html>
 
 <head>
+
     <!-- Meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>@ViewData["Title"] - newsbr</title>
+
+    <!-- Bootstrap, Font Awesome, Aminate, Owl Carausel, Normalize CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/animate.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/owl.carousel.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/owl.theme.default.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/slicknav.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Site CSS -->
+
+    <link href="assets/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+
+    <!-- Modernizr JS -->
+    <script src="assets/js/modernizr-3.5.0.min.js"></script>
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <!--Poprup-->
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -22,12 +45,36 @@
 </head>
 <body class="fadeIn">
 
+    <ul class="nav nav-fill" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#perfil" role="tab" aria-controls="profile" aria-selected="false">NoticiasBR</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contato" role="tab" aria-controls="contact" aria-selected="false">Economia</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contato" role="tab" aria-controls="contact" aria-selected="false">Esporte</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contato" role="tab" aria-controls="contact" aria-selected="false">Contato</a>
+        </li>
+    </ul>
 
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/jquery.waypoints.min.js"></script>
+        <script src="assets/js/jquery.slicknav.min.js"></script>
+        <script src="assets/js/masonry.pkgd.min.js"></script>
+        <!-- Main -->
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/smart-sticky.js"></script>
+        <script src="assets/js/theia-sticky-sidebar.js"></script>
+
 </body>
 
 
