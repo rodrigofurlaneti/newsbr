@@ -13,34 +13,20 @@
     </div>
 </div>
 
-        @foreach (var c in Model.Articles)
-        {
-            <table class="table table-borderless">
-                <tbody>
-                    <tr class="table-dark">
-                        <td align="center">
-                                <a href="@c.Url">
-                                    <img src="@c.UrlToImage" alt="..." width="500" height="250" class="rounded-lg">
-                                </a>
-                        </td>
-                    </tr>
-                    <tr class="table-dark">
-                        <td>
-                            <a href="@c.Url">
-                                <strong>
-                                    <p class="text-body title">@c.Title</p>
-                                </strong>
-                                <p class="text-body">@c.Description</p>
-                                <p class="text-right">Publicado em @c.PublishedAt</p>
-                                
-                            </a>
-                        </td>
-                    </tr>
-                    <tr class="table-dark">
-                        <td align="center"><a href="@c.Url" class="btn btn-primary btn-sm">Ver</a></td>
-                    </tr>
-                </tbody>
-            </table>
-        }
-        <h10>Total de noticias : @Html.Raw(Model.totalresults)</h10>
-    
+
+     @foreach (var c in Model.Articles)
+     {
+            
+         <div class="card">
+             <img src="@c.UrlToImage" class="card-img-top" width="200" height="300" >
+             <div class="card-body">
+                 <h5 class="card-title">@c.Title</h5>
+                 <p class="card-text">@c.Description</p>
+                 <a href="@c.Url" class="btn btn-primary">Ver</a>
+             </div>
+         </div>
+
+
+     }
+
+    <h10>Total de noticias : @Html.Raw(Model.totalresults)</h10>
