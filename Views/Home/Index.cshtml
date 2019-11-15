@@ -1,31 +1,39 @@
 ﻿@model newsbr.Models.News
 @{
     ViewData["Title"] = "Noticias";
-}<div class="text-center">
-    <div class="container-fluid">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-12 header">
-                    <h1 class="logo">Noticias</h1>
+}   
+    <div class="text-center">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-12 header">
+                        <h1 class="logo">Noticias</h1>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-
      @foreach (var articles in Model.Articles)
      {
         
-<div class="card">
+        <div class="card">
 
-    <img src="@articles.UrlToImage" class="card-img-top" width="200" height="300">
-    <div class="card-body">
-            <h5 class="card-title">@articles.Title</h5>
-              <p class="card-text">@articles.Description</p>
-            <a href="@articles.Url" class="btn btn-primary">Ver</a>
-    </div>
-</div>
-     }
-
-    <h10>Total de noticias : @Html.Raw(Model.totalresults)</h10>
+            <img src="@articles.UrlToImage" class="card-img-top" width="200" height="300">
+            <div class="card-body">
+                <h5 class="card-title">@articles.Title</h5>
+                <p class="card-text">@articles.Description</p>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-9">
+                            <a href="@articles.Url" class="btn btn-primary">Ver</a>
+                        </div>
+                        <div class="col-4 col-md-3">
+                            <kbd>@articles.PublishedAt</kbd>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                    }
+                    <h10>Total de noticias : @Html.Raw(Model.totalresults)</h10>
