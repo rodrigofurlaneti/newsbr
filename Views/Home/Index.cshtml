@@ -20,17 +20,12 @@
 <div class="card">
 
     <img src="@c.UrlToImage" class="card-img-top" width="200" height="300">
-    
-    <span class="border border-dark">
-        <div class="card-body">
+    <div class="card-body">
             <h5 class="card-title">@c.Title</h5>
-            <p class="card-text">@c.Description</p>
+              <p class="card-text">@c.Description</p>
             <a href="@c.Url" class="btn btn-primary">Ver</a>
-        </div>
-    </span>
+    </div>
 </div>
-        
-
      }
 
     <h10>Total de noticias : @Html.Raw(Model.totalresults)</h10>

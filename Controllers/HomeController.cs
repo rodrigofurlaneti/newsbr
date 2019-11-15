@@ -19,7 +19,7 @@ namespace newsbr.Controllers
             string ApiBaseUrl = "https://newsapi.org/v2/top-headlines?country=br&apiKey=f379e5691f5a4fd3b601a6990e0c4a14"; // endereço da sua api
             //string MetodoPath = "News/GetTodosNews"; //caminho do método a ser chamado
 
-            var model = new News();
+            var news = new News();
             try
             {
                 var httpWebRequest = (HttpWebRequest)WebRequest.Create(ApiBaseUrl);
@@ -31,9 +31,9 @@ namespace newsbr.Controllers
                     var body = streamReader.ReadToEnd();
                     News retorno = JsonConvert.DeserializeObject<News>(body);
                     if (retorno != null)
-                        model.status = retorno.status;
-                        model.totalresults = retorno.totalresults;
-                        model.Articles = retorno.Articles;
+                        news.status = retorno.status;
+                        news.totalresults = retorno.totalresults;
+                        news.Articles = retorno.Articles;
                 }
             }
             catch (Exception e)
@@ -41,7 +41,7 @@ namespace newsbr.Controllers
                 throw e;
             }
 
-            return View(model);
+            return View(news);
         }
     }
 }
