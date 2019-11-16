@@ -31,8 +31,8 @@ namespace newsbr.Controllers
                     var body = streamReader.ReadToEnd();
                     News retorno = JsonConvert.DeserializeObject<News>(body);
                     if (retorno != null)
-                        news.status = retorno.status;
-                        news.totalresults = retorno.totalresults;
+                        news.Status = retorno.Status;
+                        news.TotalResults = retorno.TotalResults;
                         news.Articles = retorno.Articles;
                 }
             }
